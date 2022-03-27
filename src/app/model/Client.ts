@@ -5,7 +5,6 @@ export interface Client{
   email:String
   ville:String
   address:String
-
-
-
+  latitude:number;
+ longitude:number;
 }

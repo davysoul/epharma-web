@@ -4,8 +4,4 @@ export interface StockInfoDrug{
   price:number;
   idDrug:number
   listInstanceInfo:[];
-
-
-
-
 }
