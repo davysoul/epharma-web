@@ -1,14 +1,14 @@
-<div class="logInFrm" *ngIf="formLogin">
+<div class="logInFrm">
   <form action="" class="form">
     <h1 class="title">Log In</h1>
 
     <div class="inputContainer">
-      <input type="text" class="input" placeholder="a" formControlName="email">
+      <input type="text" class="input" placeholder="a">
       <label  class="label">Email</label>
     </div>
 
     <div class="inputContainer">
-      <input type="text" class="input" placeholder="a" formControlName="password">
+      <input type="text" class="input" placeholder="a">
       <label  class="label">Password</label>
     </div>
     <label>
@@ -16,10 +16,10 @@
     </label>
 
     <input type="submit" class="submitBtn1" value="Cancel">
-    <input type="submit" class="submitBtn" value="LogIn" (click)="signIn()">
+    <input type="submit" class="submitBtn" value="LogIn">
 
     <span class="psw">Forgot <a href="#">password?</a></span>
-    <span class="psw1"><a >Sign Up</a></span>
+    <span class="psw1"><a [routerLink]="['/inscription']">Sign Up</a></span>
 
 
   </form>
