@@ -1,11 +1,11 @@
 export interface Client{
-
- firstname:String
- lastname:String
+ id:number
+ name:String
+ password:String
  email:String
- ville:String
- address:String
+ city:String
+ type:String
  latitude:number;
  longitude:number;
- drugs:[];
+ //drugs:[];
 }

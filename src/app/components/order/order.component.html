@@ -1,0 +1,38 @@
+
+<div class="signupFrm" *ngIf="profileForm">
+  <form action="" class="form" [formGroup]="profileForm">
+    <h1 class="title">Sign up</h1>
+
+    <div class="inputContainer">
+      <input type="text" class="input" placeholder="a" formControlName="name">
+      <label  class="label">Name</label>
+    </div>
+    <div class="inputContainer">
+      <input type="email" class="input" placeholder="a" formControlName="city" >
+      <label  class="label">City</label>
+    </div>
+
+
+
+    <div class="inputContainer">
+      <input type="text" class="input" placeholder="a" formControlName="city" >
+      <label  class="label">City</label>
+    </div>
+    <div class="inputContainer" formArrayName="drugs">
+      <input type="submit" class="submitBtn1" value="Cancel" (click)="addMedicament()">
+      <h3>Add medicament</h3>
+       <div *ngFor="let drug of drugs.controls;let i=index">
+        <label>
+          Medicament:{{i}}<input type="text" class="input"  [formControlName]="drugs.controls[i]" value="{{i}}">
+        </label>
+
+
+       </div>
+
+    </div>
+
+    <input type="submit" class="submitBtn1" value="Cancel">
+    <input type="submit" class="submitBtn" value="Sign up" (click)="send()">
+  </form>
+</div>
+

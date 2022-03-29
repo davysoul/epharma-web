@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ClientsService} from "../services/clients.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -9,7 +10,8 @@ import {ClientsService} from "../services/clients.service";
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ],
   providers:[
     ClientsService
