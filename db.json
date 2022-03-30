@@ -214,6 +214,42 @@
       "password": "toto123",
       "type": "Client",
       "city": "Montreal"
+    },
+    {
+      "id": 2,
+      "name": "messi",
+      "latitude": 0,
+      "longitude": 0,
+      "password": "messi123",
+      "type": "client",
+      "city": "Trois-Rivieres"
+    },
+    {
+      "id": 3,
+      "name": "Bill",
+      "latitude": 0,
+      "longitude": 0,
+      "password": "bill123",
+      "type": "client",
+      "city": "Quebec"
+    },
+    {
+      "id": 4,
+      "name": "ronaldo",
+      "latitude": 0,
+      "longitude": 0,
+      "password": "ronaldo123",
+      "type": "client",
+      "city": "Trois-Rivieres"
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "idClient": 1,
+      "drugs": [
+        null
+      ]
     }
   ]
 }

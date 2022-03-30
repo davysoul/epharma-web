@@ -3,28 +3,26 @@ import {HttpClient} from "@angular/common/http";
 import {Client} from "../model/Client";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
-import {Request} from "../model/Request";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientsService {
-
+  host:String = "http://localhost:3000";
   constructor(private http: HttpClient) {
 
   }
 
     saveClient(client: Client):Observable<Client> {
-     const host= environment.host;
-     return this.http.post<Client>(host+"/client",client);
+
+     return this.http.post<Client>(this.host+"/client",client);
 
   }
-  getClient(email:String,psw:String):Observable<Client>{
-    const host = environment.host;
-    return this.http.get<Client>(host+"/client/"+email);
+  getClient(mail:String,psw:String):Observable<Client>{
+
+    return this.http.get<Client>(this.host+"/client?email="+mail+"&password="+psw);
   }
-  saveRequest(req:Request):Observable<Request>{
-    const host = environment.host;
-    return this.http.post<Request>(host+"/client",req);
-  }
+
+
 }
